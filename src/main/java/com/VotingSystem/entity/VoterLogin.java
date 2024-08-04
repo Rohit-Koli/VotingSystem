@@ -40,4 +40,10 @@ public class VoterLogin {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	public VoterLogin(String username, String password) {
+		super();
+		this.username = username;
+		this.password = password;
+	}
+	
 }

@@ -6,7 +6,7 @@
 <body>
 	<div align="center">
 		<h2>Voter Login</h2>
-		<form th:action="@{goVoterLogin}" th:object="${voterLoginEntity}" method="post">
+		<form th:action="@{/voter/goVoterLogin}" th:object="${voterLogin}" method="post">
 			<div>
 				<label for="username">Username:</label> <input type="text"
 					id="username" th:field="*{username}" required>
