@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Voter Login</title>
+</head>
+<body>
+	<div align="center">
+		<h2>Voter Login</h2>
+		<form th:action="@{goVoterLogin}" th:object="${voterLoginEntity}" method="post">
+			<div>
+				<label for="username">Username:</label> <input type="text"
+					id="username" th:field="*{username}" required>
+			</div>
+			<div>
+				<label for="password">Password:</label> <input type="password"
+					id="password" th:field="*{password}" required>
+			</div>
+			<div>
+				<button type="submit">Register</button>
+			</div>
+		</form>
+	</div>
+</body>
+</html>

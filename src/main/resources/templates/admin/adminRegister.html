@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Register</title>
+</head>
+<body>
+    <div align="center">
+        <form th:action="@{/admin/goadminRegister}" th:object="${admin}" method="post">
+            Enter Name :<input type="text" th:field="*{name}" required><br><br>
+            Enter Address :<input type="text" th:field="*{address}" required><br><br>
+            Enter Birth Date :<input type="date" th:field="*{dob}" required><br><br>
+            Enter Gender :<input type="text" th:field="*{gender}" required><br><br>
+            Enter Username :<input type="text" th:field="*{username}" required><br><br>
+            Enter Password :<input type="password" th:field="*{password}" required><br><br>
+            <button type="submit">SUBMIT</button>
+            <button type="reset">RESET</button>
+        </form>
+    </div>
+</body>
+</html>
