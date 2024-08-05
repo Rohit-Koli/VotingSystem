@@ -30,7 +30,6 @@ public class VoterLoginController {
 		}else {
 			model.addAttribute("error", "Invalid username or password");
             return "voter/voterLogin";
-		}
-		
+		}		
 	}
 }
