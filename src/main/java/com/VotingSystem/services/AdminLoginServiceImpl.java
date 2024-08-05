@@ -1,5 +1,8 @@
 package com.VotingSystem.services;
 
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -25,6 +28,24 @@ public class AdminLoginServiceImpl implements AdminLoginService{
         }
         return null;
 	}
-	
+
+	@Override
+	public List<AdminLogin> adminList() {
+		List<AdminLogin> adminLoginList=adminLoginRepo.findAll();
+		if(adminLoginList!=null) {
+			return adminLoginList;
+		}
+		return null;
+	}
+
+	@Override
+	public boolean deleteAdminLogin(int id) {
+		Optional<AdminLogin> res=adminLoginRepo.findById(id);
+		if(res.isPresent()) {
+			adminLoginRepo.deleteById(id);
+			return true;
+		}
+		return false;
+	}	
 	
 }
