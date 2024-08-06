@@ -39,17 +39,18 @@ public class VoterServiceImpl implements VoterService {
 
 	@Override
 	public Voter updateVoter(Voter voter,int id) {
-		Optional<Voter> voterData=voterRepo.findById(id);
-		if(voterData.isPresent()) {
-			Voter newVoter=voterData.get();
-			newVoter.setUsername(voter.getUsername());
-			newVoter.setDob(voter.getDob());
-			newVoter.setGender(voter.getGender());
-			newVoter.setPassword(voter.getPassword());
-			newVoter.setUsername(voter.getUsername());
-			voterRepo.save(newVoter);
-		}
-		return null;
+		Optional<Voter> voterData = voterRepo.findById(id);
+        if (voterData.isPresent()) {
+            Voter newVoter = voterData.get();
+            newVoter.setUsername(voter.getUsername());
+            newVoter.setDob(voter.getDob());
+            newVoter.setGender(voter.getGender());
+            newVoter.setPassword(voter.getPassword());
+            newVoter.setVoterName(voter.getVoterName());
+            newVoter.setAddress(voter.getAddress());
+            return voterRepo.save(newVoter);
+        }
+        return null;
 	}
 
 	@Override

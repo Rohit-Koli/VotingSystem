@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Voter List</title>
+</head>
+<body>
+    <h1>Registered Voters are:</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Birth Date</th>
+                <th>Gender</th>
+                <th>Address</th>
+                <th>Username</th>
+                <th>Delete</th>
+                <th>Update</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="voter :${voters}">
+                <td th:text="${voter.id}"></td>
+                <td th:text="${voter.voterName}"></td>
+                <td th:text="${voter.dob}"></td>
+                <td th:text="${voter.gender}"></td>
+                <td th:text="${voter.address}"></td>
+                <td th:text="${voter.username}"></td>
+                <td><a th:href="@{/deleteVoter(id=${voter.id})}">Delete</a></td>
+                <td><a th:href="@{/updateVoter(id=${voter.id})}">Update</a></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
