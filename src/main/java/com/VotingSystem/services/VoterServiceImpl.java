@@ -21,15 +21,20 @@ public class VoterServiceImpl implements VoterService {
 
 	@Override
 	public List<Voter> voterList() {
-		List<Voter> find=voterRepo.findAll();
-		return find;
+//		List<Voter> find=voterRepo.findAll();
+//		return find;
+		return voterRepo.findAll();
 	}
 
 	@Override
 	public Voter findById(int id) {
 		Optional<Voter> findById=voterRepo.findById(id);
-		Voter voter=findById.get();
-		return voter;
+		if(findById.isPresent()) {
+			Voter voter=findById.get();
+			return voter;
+		}else {
+			return null;
+		}		
 	}
 
 	@Override
@@ -50,8 +55,10 @@ public class VoterServiceImpl implements VoterService {
 	@Override
 	public void deleteVoter(int id) {
 		Optional<Voter> findById=voterRepo.findById(id);
-		Voter voter=findById.get();
-		voterRepo.delete(voter);
+		if(findById.isPresent()) {
+			Voter voter=findById.get();
+			voterRepo.delete(voter);
+		}		
 	}
 	
 	@Override
