@@ -19,54 +19,76 @@ The Voting System is a web application designed to manage voters and elections. 
 
 ## Project Structure
 
-voting-system/
-├── src/
-│ ├── main/
-│ │ ├── java/
-│ │ │ └── com/
-│ │ │ └── votingsystem/
-│ │ │ ├── VotingSystemApplication.java
-│ │ │ ├── controller/
-│ │ │ │ └── VoterController.java
-| | | | └──AdminLoginController
-| | | | └──IndexController
-| | | | └──VoterActionController
-| | | | └──VoterController
-| | | | └──VoterLoginController
-│ │ │ ├── entity/
-│ │ │ │ └── Admin.java
-│ │ │ │ └── AdminLogin.java
-│ │ │ │ └── Profile.java
-│ │ │ │ └── Voter.java
-│ │ │ │ └── VoterLogin.java
-│ │ │ ├── repository/
-│ │ │ │ └── AdminLoginRepository.java
-│ │ │ │ └── AdminRepository.java
-│ │ │ │ └── ProfileRepository.java
-│ │ │ │ └── VoterLoginRepository.java
-│ │ │ │ └── VoterRepository.java
-│ │ │ ├── service/
-│ │ │ └── AdminLoginService.java
-│ │ │ └── AdminLoginServiceImpl.java
-│ │ │ └── AdminService.java
-│ │ │ └── AdminServiceImpl.java
-│ │ │ └── ProfileService.java
-│ │ │ └── VoterService.java
-│ │ │ └── VoterService.java
-│ │ │ └── VoterService.java
-│ │ ├── resources/
-│ │ │ ├── application.properties
-│ │ │ ├── static/
-│ │ │ └── templates/
-│ │ │ ├── voterList.html
-│ │ │ └── voterUpdate.html
-│ ├── test/
-│ │ └── java/
-│ │ └── com/
-│ │ └── votingsystem/
-│ │ └── VotingSystemApplicationTests.java
-└── pom.xml
-
+├───.mvn
+│   └───wrapper
+├───.settings
+├───bin
+│   ├───.mvn
+│   │   └───wrapper
+│   ├───.settings
+│   ├───src
+│   │   ├───main
+│   │   │   ├───java
+│   │   │   │   └───com
+│   │   │   │       └───VotingSystem
+│   │   │   └───resources
+│   │   │       └───templates
+│   │   └───test
+│   │       └───java
+│   │           └───com
+│   │               └───VotingSystem
+│   └───target
+│       └───classes
+│           └───META-INF
+├───src
+│   ├───main
+│   │   ├───java
+│   │   │   └───com
+│   │   │       └───VotingSystem
+│   │   │           ├───controller
+│   │   │           ├───entity
+│   │   │           ├───repository
+│   │   │           └───services
+│   │   └───resources
+│   │       ├───static
+│   │       └───templates
+│   │           ├───admin
+│   │           │   └───include
+│   │           ├───assets
+│   │           │   ├───css
+│   │           │   └───js
+│   │           └───voter
+│   └───test
+│       └───java
+│           └───com
+│               └───VotingSystem
+└───target
+    ├───classes
+    │   ├───com
+    │   │   └───VotingSystem
+    │   │       ├───controller
+    │   │       ├───entity
+    │   │       ├───repository
+    │   │       └───services
+    │   ├───META-INF
+    │   │   └───maven
+    │   │       └───com
+    │   │           └───VotingSystem
+    │   └───templates
+    │       ├───admin
+    │       │   └───include
+    │       ├───assets
+    │       │   ├───css
+    │       │   └───js
+    │       ├───user
+    │       └───voter
+    ├───generated-sources
+    │   └───annotations
+    ├───generated-test-sources
+    │   └───test-annotations
+    └───test-classes
+        └───com
+            └───VotingSystem
 ## Installation
 
 1. **Clone the repository:**
