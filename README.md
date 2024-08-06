@@ -18,7 +18,7 @@ The Voting System is a web application designed to manage voters and elections. 
 - **Build Tool**: Maven
 
 ## Project Structure
-
+```
 ├───.mvn
 │   └───wrapper
 ├───.settings
@@ -89,6 +89,8 @@ The Voting System is a web application designed to manage voters and elections. 
     └───test-classes
         └───com
             └───VotingSystem
+
+```
 ## Installation
 
 1. **Clone the repository:**
