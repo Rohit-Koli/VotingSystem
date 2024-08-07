@@ -2,6 +2,9 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Update Voter</title>
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css'
+	rel='stylesheet'>
+<link rel="stylesheet" th:href="@{/css/style.css}">
 </head>
 <body>
     <div align="center">
@@ -37,10 +40,8 @@
                 <input type="password" id="password" th:field="*{password}" required>
             </div>
             <div>
-                <button type="submit">Update</button>
-            </div>
-            <div>
-                <button type="reset">Reset</button>
+            <button type="submit" class="f-btn">SUBMIT</button>
+				<button type="reset" class="f-btn">RESET</button>
             </div>
             <div th:if="${error}">
                 <p th:text="${error}" style="color: red;"></p>
